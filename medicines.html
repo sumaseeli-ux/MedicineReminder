@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Medicine Reminder</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>💊 Medicine Reminder</h1>
+
+    <form method="POST">
+
+        <label>Medicine Name</label>
+
+        <input type="text" name="name" required>
+
+        <label>Dosage</label>
+
+        <input type="text" name="dosage" required>
+
+        <label>Reminder Time</label>
+
+        <input type="time" name="time" required>
+
+        <br><br>
+
+        <button type="submit">Save Medicine</button>
+
+    </form>
+
+    <hr>
+
+    <h2>Saved Medicines</h2>
+
+    <table>
+
+        <tr>
+            <th>ID</th>
+            <th>Medicine</th>
+            <th>Dosage</th>
+            <th>Time</th>
+            <th>Action</th>
+        </tr>
+
+        {% for medicine in medicines %}
+
+        <tr>
+
+            <td>{{ medicine[0] }}</td>
+
+            <td>{{ medicine[1] }}</td>
+
+            <td>{{ medicine[2] }}</td>
+
+            <td>{{ medicine[3] }}</td>
+
+            <td>
+
+                <a href="/delete/{{ medicine[0] }}">
+                    Delete
+                </a>
+
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+    <br>
+
+    <a href="/">
+        <button>🏠 Home</button>
+    </a>
+
+</div>
+
+</body>
+
+</html>

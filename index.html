@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Medicine Reminder & Health Predictor</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🏥 Medicine Reminder & Health Predictor</h1>
+
+    <p class="welcome">
+        Welcome to your personal healthcare assistant.
+    </p>
+
+    <div class="card">
+
+        <h2>💊 Medicine Reminder</h2>
+
+        <p>
+            Save your medicines and reminder time.
+        </p>
+
+        <a href="/medicine">
+            <button>Add / View Medicines</button>
+        </a>
+
+    </div>
+
+    <div class="card">
+
+        <h2>❤️ Health Risk Predictor</h2>
+
+        <p>
+            Predict your health risk using AI.
+        </p>
+
+        <a href="/predictor">
+            <button>Predict Health</button>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

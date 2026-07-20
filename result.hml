@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Prediction Result</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>❤️ Health Prediction Result</h1>
+
+    <div class="card">
+
+        <h2>{{ risk }}</h2>
+
+        <p>{{ suggestion }}</p>
+
+    </div>
+
+    <br>
+
+    <a href="/predictor">
+        <button>🔄 Predict Again</button>
+    </a>
+
+    <a href="/">
+        <button>🏠 Home</button>
+    </a>
+
+</div>
+
+</body>
+
+</html>

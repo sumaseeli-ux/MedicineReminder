@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Health Risk Predictor</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>❤️ AI Health Risk Predictor</h1>
+
+    <form action="/predict" method="POST">
+
+        <label>Age</label>
+
+        <input
+            type="number"
+            name="age"
+            placeholder="Enter Age"
+            required>
+
+        <label>Blood Pressure</label>
+
+        <input
+            type="number"
+            name="bp"
+            placeholder="Enter Blood Pressure"
+            required>
+
+        <label>Blood Sugar</label>
+
+        <input
+            type="number"
+            name="sugar"
+            placeholder="Enter Blood Sugar"
+            required>
+
+        <label>BMI</label>
+
+        <input
+            type="number"
+            step="0.1"
+            name="bmi"
+            placeholder="Enter BMI"
+            required>
+
+        <br><br>
+
+        <button type="submit">
+            Predict Health Risk
+        </button>
+
+    </form>
+
+    <br>
+
+    <a href="/">
+        <button>🏠 Home</button>
+    </a>
+
+</div>
+
+</body>
+
+</html>
